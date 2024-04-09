@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DEBATE SEMANAL - CONDEB</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+        }
+        .block {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Debate Treino Nacional - Condeb</h1>
+    <ul id="debate"></ul>
+    <h2>Sala 1</h2>
+    <div class="container">
+        <div class="block">
+            <h2>Primeiro Governo</h2>
+            <h3>PM</h3>
+            <h3>VPL</h3>
+            <button type="submit">Inverter</button>
+        </div>
+        <div class="block">
+            <h2>Primeira Oposição</h2>
+            <h3>LO</h3>
+            <h3>VLO</h3>
+            <button type="submit">Inverter</button>
+        </div>
+        <div class="block">
+            <h2>Segundo Governo</h2>
+            <h3>Ext</h3>
+            <h3>Whip</h3>
+            <button type="submit">Inverter</button>
+        </div>
+        <div class="block">
+            <h2>Segunda Oposição</h2>
+            <h3>Ext</h3>
+            <h3>Whip</h3>
+            <button type="submit">Inverter</button>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <h2>Fila de Espera</h2>
+        <form style="width: 20rem;" action="/" method='POST'>
+            <div class = "form-floating mb-3">
+                <input type="text" class = "form-control" id="floatingInput" name="nome_sd" placeholder="Nome e Sobrenome/SD">
+                <label for="floatingInput">Nome/SD:</label>
+            </div>
+            <div class = "form-floating mb-3">
+                <input type="text" class = "form-control" id="floatingInput" name="dupla_sd" placeholder="Nome e Sobrenome/SD Dupla (Caso Haja)">
+                <label for="floatingInput">Nome/SD Dupla:</label>
+            </div>
+    
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <h2>Debatedores Cadastrados</h2>
+    <table class = "table">
+        <tr>
+            <th>Nome/SD</th>
+            <th>Nome/SD Dupla</th>
+         </tr>
+    </table>
+
+
+</body>
+</html>
