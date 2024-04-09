@@ -25,13 +25,16 @@ def enviar():
     bd.clear_cache()
     return redirect(url_for('index'))
 
+@app.route('/teste/<nome_sd>')
+def teste(nome_sd):
+    return render_template('teste.html', nome_sd = nome_sd)
 
-'''@app.route("/delete/<nome_sd>")
+@app.route("/delete/<nome_sd>")
 def delete(nome_sd):
-    delete debater 
-    nome_sd = Query()
-    bd.update(delete('nome_sd','dupla_sd'), where('nome_sd') == nome_sd)
-    return redirect(url_for("index"))'''
+    #delete debater 
+    debater = Query()
+    bd.remove(debater.nome_sd == nome_sd)
+    return redirect(url_for("index"))
 
 
 if __name__ == '__main__':
