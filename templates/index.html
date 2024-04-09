@@ -3,6 +3,7 @@
 <head>
     <title>DEBATE SEMANAL - CONDEB</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         .container {
             display: grid;
@@ -68,6 +69,17 @@
             <th>Nome/SD Dupla</th>
          </tr>
     </table>
+
+    {% for debatedor in debatedores %}
+    <tr>
+        <td>{{ debatedor.nome_sd }}</td>
+        <td> & </td>
+        <td>{{ debatedor.dupla_sd }}</td> 
+        <td><button><a href="/delete/{{debatedor['nome_sd']}}"><i class="fa fa-trash-o"></i></a></button></td> <br />
+    </tr>
+    <tbody id="debatedores"></tbody>
+    {% endfor %}
+    <script src="js/main.js"></script>
 
 
 </body>
